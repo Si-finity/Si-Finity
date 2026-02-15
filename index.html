@@ -3,151 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Si-Finity | Robotics Learning</title>
+<title>Si-Finity Robotics Learning Website</title>
 
 <style>
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* ===== VARIABLES ===== */
-:root {
-  --bg-main: #0a0f1f;
-  --bg-section: #111831;
-  --accent: #00e6ff;
-  --text-main: #e6ecf3;
-  --text-muted: #9ba4b4;
+body{
+  font-family: "Segoe UI", sans-serif;
+  background:#0b1020;
+  color:#e9eef5;
+  line-height:1.8;
+  scroll-behavior:smooth;
 }
 
-/* ===== BASE ===== */
-body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
-  line-height: 1.7;
-  scroll-behavior: smooth;
+/* NAVIGATION */
+nav{
+  position:sticky;
+  top:0;
+  background:#060a18;
+  padding:15px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
 }
 
-/* ===== NAV ===== */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(5, 10, 25, 0.95);
-  padding: 15px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav h1{
+  color:#00e6ff;
+  font-size:1.8rem;
 }
 
-nav h1 {
-  color: var(--accent);
-  font-size: 1.7rem;
+nav a{
+  color:#e9eef5;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:0.95rem;
+  transition:color 0.3s;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 22px;
+nav a:hover{
+  color:#00e6ff;
 }
 
-nav ul li a {
-  color: var(--text-main);
-  text-decoration: none;
-  font-size: 0.95rem;
-  position: relative;
+/* SECTIONS */
+section{
+  padding:90px 8%;
+  animation:fadeUp 1.2s ease;
 }
 
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.3s ease;
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+section:nth-child(even){
+  background:#10172f;
 }
 
-/* ===== SECTIONS ===== */
-section {
-  padding: 90px 8%;
-  background: var(--bg-section);
-  animation: sectionFade 1.2s ease forwards;
+h2{
+  color:#00e6ff;
+  margin-bottom:25px;
+  font-size:2.2rem;
 }
 
-section:nth-child(even) {
-  background: #0d1328;
+p{
+  color:#cfd6e4;
+  margin-bottom:20px;
 }
 
-@keyframes sectionFade {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* IMAGES */
+.section-img{
+  width:100%;
+  max-width:800px;
+  margin:35px auto;
+  display:block;
+  border-radius:16px;
+  box-shadow:0 25px 60px rgba(0,230,255,0.25);
+  transition:transform 0.4s, box-shadow 0.4s;
 }
 
-h2 {
-  color: var(--accent);
-  margin-bottom: 25px;
-  font-size: 2rem;
+.section-img:hover{
+  transform:scale(1.05);
+  box-shadow:0 40px 90px rgba(0,230,255,0.45);
 }
 
-p {
-  color: var(--text-muted);
-  margin-bottom: 18px;
+/* FOOTER */
+footer{
+  background:#050814;
+  padding:25px;
+  text-align:center;
+  font-size:0.9rem;
+  color:#9aa3b2;
 }
 
-/* ===== IMAGES ===== */
-.section-img {
-  width: 100%;
-  max-width: 760px;
-  margin: 35px auto;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 20px 45px rgba(0,230,255,0.18);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.section-img:hover {
-  transform: scale(1.06);
-  box-shadow: 0 35px 80px rgba(0,230,255,0.35);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #050816;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  section {
-    padding: 70px 6%;
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    gap:10px;
   }
 }
 </style>
@@ -155,106 +112,100 @@ footer {
 
 <body>
 
-<!-- ===== NAV ===== -->
 <nav>
   <h1>Si-Finity</h1>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#fundamentals">Fundamentals</a></li>
-    <li><a href="#programming">Programming</a></li>
-    <li><a href="#ai">AI & Sensors</a></li>
-    <li><a href="#future">Future</a></li>
-  </ul>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#fundamentals">Fundamentals</a>
+    <a href="#programming">Programming</a>
+    <a href="#ai">AI & Sensors</a>
+    <a href="#future">Future</a>
+  </div>
 </nav>
 
-<!-- ===== HOME ===== -->
+<!-- HOME -->
 <section id="home">
-  <h2>Welcome to Si-Finity</h2>
+<h2>Welcome to Si-Finity Robotics Learning</h2>
 
-  <p>
-    Si-Finity is a forward-thinking robotics learning platform built to prepare learners for a rapidly evolving, technology-driven future.
-  </p>
+<p>
+Si-Finity is a modern robotics learning website designed to inspire curiosity, creativity, and technical confidence in learners of all ages. In today’s rapidly evolving digital world, robotics plays a vital role in industries such as healthcare, manufacturing, space exploration, and smart automation. Our platform introduces robotics in a structured yet engaging manner, allowing learners to understand not only how robots work, but why they matter.
+</p>
 
-  <img
-    src="People-Using-Technology.jpg"
-    class="section-img"
-    alt="People using modern technology and robotics learning">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80"
+class="section-img" alt="People learning technology and robotics">
 
-  <p>
-    Our mission is to make robotics education accessible, inspiring, and practical, helping learners turn ideas into intelligent machines.
-  </p>
+<p>
+Si-Finity focuses on blending theory with real-world applications. Instead of memorizing concepts, learners explore how robotics influences daily life and future careers. This platform encourages innovation, problem-solving, and critical thinking — essential skills for tomorrow’s technology-driven society.
+</p>
 </section>
 
-<!-- ===== FUNDAMENTALS ===== -->
+<!-- FUNDAMENTALS -->
 <section id="fundamentals">
-  <h2>Robotics Fundamentals</h2>
+<h2>Robotics Fundamentals</h2>
 
-  <p>
-    Robotics fundamentals introduce the mechanical, electronic, and logical building blocks that form every robotic system.
-  </p>
+<p>
+Robotics fundamentals form the backbone of every intelligent machine. At this stage, learners explore the essential components that allow robots to function — including mechanical structures, electronic circuits, sensors, actuators, and control logic. Understanding these basics helps learners visualize how simple components work together to create complex robotic behavior.
+</p>
 
-  <img
-    src="Robotic-Learning.jpg"
-    class="section-img"
-    alt="Robotics learning fundamentals">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80"
+class="section-img" alt="Robotics fundamentals learning">
 
-  <p>
-    Understanding these basics allows learners to progress confidently into advanced robotics and automation.
-  </p>
+<p>
+Through strong foundational knowledge, students gain the confidence to design, analyze, and troubleshoot robotic systems. Si-Finity ensures that learners grasp core principles in a clear and intuitive way, preparing them for advanced robotics concepts and hands-on innovation.
+</p>
 </section>
 
-<!-- ===== PROGRAMMING ===== -->
+<!-- PROGRAMMING -->
 <section id="programming">
-  <h2>Programming for Robotics</h2>
+<h2>Programming for Robotics</h2>
 
-  <img
-    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-    class="section-img"
-    alt="Robotics programming and electronics">
+<p>
+Programming is the intelligence behind every robot. It allows machines to process information, make decisions, and respond to real-world conditions. In robotics programming, learners work with logical structures, control algorithms, and problem-solving techniques that bring machines to life.
+</p>
 
-  <p>
-    Programming enables robots to think, respond, and solve problems autonomously using logic and control systems.
-  </p>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+class="section-img" alt="Robotics programming">
+
+<p>
+Si-Finity introduces programming concepts in a practical and engaging manner, helping learners understand how software interacts with hardware. This knowledge builds a strong bridge between coding and physical systems, unlocking endless creative possibilities.
+</p>
 </section>
 
-<!-- ===== AI ===== -->
+<!-- AI -->
 <section id="ai">
-  <h2>AI & Sensors in Robotics</h2>
+<h2>AI & Sensors in Robotics</h2>
 
-  <img
-    src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
-    class="section-img"
-    alt="AI sensors in robotics">
+<p>
+Artificial Intelligence and sensors enable robots to perceive their surroundings and make intelligent decisions. Sensors gather data from the environment, while AI algorithms interpret that data to guide robotic actions. Together, they transform simple machines into adaptive, intelligent systems.
+</p>
 
-  <p>
-    Sensors and artificial intelligence allow robots to perceive their environment and make intelligent decisions.
-  </p>
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80"
+class="section-img" alt="AI and sensors in robotics">
+
+<p>
+Si-Finity explores how AI-driven robotics is shaping industries such as healthcare, autonomous vehicles, and smart cities. Learners gain insight into the technologies powering the future.
+</p>
 </section>
 
-<!-- ===== FUTURE ===== -->
+<!-- FUTURE -->
 <section id="future">
-  <h2>The Future of Robotics</h2>
+<h2>The Future of Robotics</h2>
 
-  <img
-    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
-    class="section-img"
-    alt="Future robotics and automation">
+<p>
+The future of robotics promises remarkable advancements in automation, artificial intelligence, and human-robot collaboration. Robots will increasingly support daily life, enhance productivity, and solve complex global challenges. Education is the key to shaping this future responsibly.
+</p>
 
-  <p>
-    Si-Finity envisions a future where robotics education empowers individuals to shape technology responsibly.
-  </p>
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80"
+class="section-img" alt="Future of robotics">
+
+<p>
+Si-Finity prepares learners to become innovators, creators, and ethical technologists who will shape the robotics-driven world of tomorrow.
+</p>
 </section>
 
 <footer>
-  © 2026 Si-Finity | Robotics Learning Platform
+© 2026 Si-Finity Robotics Learning Website
 </footer>
-
-<!-- ===== FORCE HOME ON LOAD ===== -->
-<script>
-  if (window.location.hash) {
-    window.location.replace(window.location.pathname);
-  }
-</script>
 
 </body>
 </html>
