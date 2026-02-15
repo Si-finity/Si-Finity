@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Si-Finity | Robotics Learning</title>
+
+<!-- ===============================
+     Technology Used: HTML5 + CSS3
+================================ -->
+
+<style>
+/* ---------- CSS RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg-main: #0a0f1f;
+  --bg-section: #111831;
+  --accent: #00e6ff;
+  --text-main: #e6ecf3;
+  --text-muted: #9ba4b4;
+}
+
+/* ---------- BASE STYLES ---------- */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 10, 25, 0.95);
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--accent);
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 80px 8%;
+  background: var(--bg-section);
+  animation: fadeUp 1s ease;
+}
+
+section:nth-child(even) {
+  background: #0d1328;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 18px;
+  color: var(--text-muted);
+}
+
+/* ---------- IMAGES ---------- */
+.section-img {
+  width: 100%;
+  max-width: 750px;
+  border-radius: 14px;
+  margin: 35px 0;
+  box-shadow: 0 20px 50px rgba(0, 230, 255, 0.18);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 30px 70px rgba(0, 230, 255, 0.25);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #050816;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ========== NAVIGATION BAR ========== -->
+<nav>
+  <h1>Si-Finity</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#fundamentals">Fundamentals</a></li>
+    <li><a href="#programming">Programming</a></li>
+    <li><a href="#ai">AI & Sensors</a></li>
+    <li><a href="#future">Future</a></li>
+  </ul>
+</nav>
+
+<!-- ========== HOME ========== -->
+<section id="home">
+  <h2>Welcome to Si-Finity</h2>
+
+  <p>
+    Si-Finity is a forward-thinking robotics learning initiative designed to prepare learners for a technology-driven future. Robotics is rapidly transforming industries such as healthcare, manufacturing, education, and space exploration. Understanding robotics today means gaining the skills needed to solve real-world problems tomorrow.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1581091012184-5c7a3b4c57d1" class="section-img" alt="Robotics Lab">
+
+  <p>
+    At Si-Finity, we believe robotics education should be accessible, structured, and inspiring. Our content focuses on building strong foundations while encouraging creativity and experimentation. Learners are guided through how robots are built, programmed, and enhanced with intelligent systems.
+  </p>
+
+  <p>
+    Robotics learning develops logical thinking, teamwork, and innovation. Whether you are a beginner, student, or future engineer, Si-Finity provides a roadmap to explore robotics with confidence and curiosity. This platform exists to bridge imagination and engineering, turning ideas into intelligent machines.
+  </p>
+</section>
+
+<!-- ========== FUNDAMENTALS ========== -->
+<section id="fundamentals">
+  <h2>Robotics Fundamentals</h2>
+
+  <p>
+    Robotics fundamentals introduce the essential building blocks of robotic systems. Every robot is a combination of mechanical design, electronics, and control logic. Understanding these components helps learners see how machines move, respond, and interact with their environment.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1581092334704-1e7e2a1f9b6b" class="section-img" alt="Robot Parts">
+
+  <p>
+    Mechanical structures determine how a robot moves, whether through wheels, arms, or legs. Actuators such as motors convert electrical signals into physical motion, while power systems ensure reliable operation. Stability, balance, and efficiency are all influenced by fundamental design choices.
+  </p>
+
+  <p>
+    Control systems act as the robot’s brain, processing data and making decisions. Learning robotics fundamentals builds a strong technical mindset, allowing beginners to progress smoothly into advanced programming and intelligent robotics applications with confidence.
+  </p>
+</section>
+
+<!-- ========== PROGRAMMING ========== -->
+<section id="programming">
+  <h2>Programming for Robotics</h2>
+
+  <p>
+    Programming gives robots the ability to think, react, and perform tasks autonomously. Without programming, a robot is simply a collection of hardware components. Code transforms machines into intelligent systems capable of decision-making and problem-solving.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df49" class="section-img" alt="Robot Programming">
+
+  <p>
+    Robotics programming focuses on logic, sequencing, and control. Learners begin with simple instructions such as movement and obstacle avoidance, then progress toward complex behaviors. Concepts like loops, conditions, and variables are essential for efficient robotic control.
+  </p>
+
+  <p>
+    Programming robots also teaches structured thinking and debugging skills. These skills extend beyond robotics into software development, automation, and artificial intelligence. Mastering robotic programming opens the door to innovation across multiple industries.
+  </p>
+</section>
+
+<!-- ========== AI & SENSORS ========== -->
+<section id="ai">
+  <h2>AI & Sensors in Robotics</h2>
+
+  <p>
+    Artificial intelligence and sensors allow robots to perceive and understand their surroundings. Sensors act as a robot’s senses, collecting data such as distance, temperature, sound, and light. This data enables robots to respond intelligently to changing environments.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" class="section-img" alt="AI Robotics">
+
+  <p>
+    AI algorithms analyze sensor data to make predictions and decisions. Robots can learn from experience, recognize patterns, and adapt their behavior. This capability is essential for applications such as autonomous vehicles, medical robots, and smart assistants.
+  </p>
+
+  <p>
+    Learning about AI and sensors introduces students to machine learning, data processing, and intelligent automation. These technologies represent the future of robotics and redefine how machines collaborate with humans.
+  </p>
+</section>
+
+<!-- ========== FUTURE ========== -->
+<section id="future">
+  <h2>The Future of Robotics & Learning</h2>
+
+  <p>
+    The future of robotics is deeply connected to education and lifelong learning. As technology evolves, robots will become more integrated into daily life, assisting humans in complex and meaningful ways. Preparing for this future requires continuous learning and adaptability.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" class="section-img" alt="Future Robotics">
+
+  <p>
+    Robotics education will increasingly focus on interdisciplinary skills, combining engineering, programming, ethics, and creativity. Learners will design robots that not only perform tasks efficiently but also align with human values and societal needs.
+  </p>
+
+  <p>
+    Si-Finity envisions a future where robotics learning empowers individuals to shape technology responsibly. By fostering curiosity and innovation, we help learners become creators of the future rather than passive consumers of technology.
+  </p>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  © 2026 Si-Finity | Robotics Learning Platform
+</footer>
+
+</body>
+</html>
