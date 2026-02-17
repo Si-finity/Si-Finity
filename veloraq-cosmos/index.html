@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veloraq Cosmos — Exploring Space & the Universe</title>
+
+<!-- =====================
+     GLOBAL CSS
+===================== -->
+<style>
+:root {
+  --bg-main:#05060d;
+  --bg-soft:#0c1024;
+  --accent:#8a6cff;
+  --accent-glow:rgba(138,108,255,.6);
+  --text-main:#eef0ff;
+  --text-muted:#aab0ff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:radial-gradient(circle at top,#0e1333,var(--bg-main));
+  color:var(--text-main);
+  line-height:1.75;
+  overflow-x:hidden;
+}
+
+/* =====================
+   STAR BACKGROUND
+===================== */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(1px 1px at 20% 30%,#fff,transparent),
+    radial-gradient(1px 1px at 70% 80%,#fff,transparent),
+    radial-gradient(1px 1px at 40% 60%,#fff,transparent);
+  opacity:.15;
+  pointer-events:none;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(5,6,13,.85);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+nav ul{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:14px;
+  gap:10px;
+}
+
+nav a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:20px;
+  transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent),#4dd9ff);
+  box-shadow:0 0 15px var(--accent-glow);
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section{
+  min-height:100vh;
+  padding:120px 10% 80px;
+  display:none;
+  animation:fadeIn .8s ease forwards;
+}
+
+section.active{display:block}
+
+h1{
+  font-size:clamp(2.2rem,4vw,3.2rem);
+  margin-bottom:20px;
+  background:linear-gradient(135deg,#fff,var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+p{
+  max-width:900px;
+  margin-bottom:18px;
+  color:#e4e6ff;
+}
+
+/* =====================
+   IMAGES
+===================== */
+.hero-img{
+  width:100%;
+  max-width:900px;
+  border-radius:18px;
+  margin:30px 0;
+  box-shadow:
+    0 0 25px rgba(138,108,255,.25),
+    0 0 60px rgba(77,217,255,.15);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer{
+  background:#04050a;
+  text-align:center;
+  padding:30px 10%;
+  border-top:1px solid rgba(255,255,255,.05);
+  font-size:13px;
+  color:var(--text-muted);
+}
+
+footer a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media(max-width:768px){
+  section{padding:110px 6% 60px}
+  nav a{font-size:12px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================
+     NAVIGATION
+===================== -->
+<nav>
+<ul>
+  <li><a href="#" data-page="about" class="active">Veloraq</a></li>
+  <li><a href="#" data-page="origin">Origin</a></li>
+  <li><a href="#" data-page="galaxies">Galaxies</a></li>
+  <li><a href="#" data-page="stars">Stars</a></li>
+  <li><a href="#" data-page="blackholes">Black Holes</a></li>
+  <li><a href="#" data-page="solar">Solar</a></li>
+  <li><a href="#" data-page="exoplanets">Exoplanets</a></li>
+  <li><a href="#" data-page="dark">Dark</a></li>
+  <li><a href="#" data-page="spacetime">Space-Time</a></li>
+  <li><a href="#" data-page="telescopes">Telescopes</a></li>
+  <li><a href="#" data-page="human">Human Space</a></li>
+  <li><a href="#" data-page="future">Future</a></li>
+  <li><a href="#" data-page="legal">Legal</a></li>
+</ul>
+</nav>
+
+<!-- =====================
+     ABOUT
+===================== -->
+<section id="about" class="active">
+<h1>Veloraq — A New Vision of the Universe</h1>
+<img class="hero-img" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Universe">
+
+<p>
+Veloraq is a newly launched educational company dedicated exclusively to space and universe knowledge. Our mission is to make the cosmos understandable, inspiring, and scientifically accurate for everyone.
+</p>
+<p>
+Through elegant design and carefully researched explanations, Veloraq transforms astronomy and cosmology into an immersive learning experience. We focus on clarity, trust, and curiosity.
+</p>
+<p>
+Veloraq exists for those who look at the night sky and want deeper understanding — not just facts, but perspective.
+</p>
+</section>
+
+<!-- =====================
+     CONTENT SECTIONS
+===================== -->
+<section id="origin"><h1>The Origin of the Universe</h1><img class="hero-img" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564"><p>The Universe began 13.8 billion years ago with the Big Bang, an expansion of space itself that gave rise to matter, energy, and time.</p></section>
+
+<section id="galaxies"><h1>Galaxies</h1><img class="hero-img" src="https://images.unsplash.com/photo-1450849608880-6f787542c88a"><p>Galaxies are vast gravitational systems containing billions of stars, gas, dust, and dark matter.</p></section>
+
+<section id="stars"><h1>Stars</h1><img class="hero-img" src="https://images.unsplash.com/photo-1473923377535-0002805f57c3"><p>Stars are powered by nuclear fusion and evolve through predictable life cycles.</p></section>
+
+<section id="blackholes"><h1>Black Holes</h1><img class="hero-img" src="https://images.unsplash.com/photo-1543722530-d2c3201371e7"><p>Black holes represent extreme gravity where space-time bends dramatically.</p></section>
+
+<section id="solar"><h1>Solar System</h1><img class="hero-img" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3"><p>Our solar system formed from a disk of gas and dust around the young Sun.</p></section>
+
+<section id="exoplanets"><h1>Exoplanets</h1><img class="hero-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"><p>Thousands of planets exist beyond our solar system, some potentially habitable.</p></section>
+
+<section id="dark"><h1>Dark Universe</h1><img class="hero-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><p>Dark matter and dark energy dominate the cosmos yet remain mysterious.</p></section>
+
+<section id="spacetime"><h1>Space-Time</h1><img class="hero-img" src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986"><p>Space and time form a single fabric shaped by mass and energy.</p></section>
+
+<section id="telescopes"><h1>Telescopes</h1><img class="hero-img" src="https://images.unsplash.com/photo-1543946603-0f53e85e2b6d"><p>Observatories allow us to see the Universe across wavelengths.</p></section>
+
+<section id="human"><h1>Human Space Exploration</h1><img class="hero-img" src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06"><p>Human missions expand scientific understanding and inspire generations.</p></section>
+
+<section id="future"><h1>The Future of the Universe</h1><img class="hero-img" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde"><p>The Universe continues expanding, shaping cosmic destiny.</p></section>
+
+<!-- =====================
+     LEGAL PAGE
+===================== -->
+<section id="legal">
+<h1>Privacy Policy & Disclaimer</h1>
+
+<p><strong>Privacy Policy</strong></p>
+<p>
+Veloraq does not collect personal data, cookies, or user-identifiable information. This website is static and hosted via GitHub Pages. Any analytics, if added in the future, will respect user privacy and comply with applicable laws.
+</p>
+
+<p><strong>Educational Disclaimer</strong></p>
+<p>
+All content provided on Veloraq is for educational and informational purposes only. While every effort is made to ensure scientific accuracy, the content should not be considered professional, academic, or research advice.
+</p>
+
+<p><strong>Liability Disclaimer</strong></p>
+<p>
+Veloraq is not responsible for errors, omissions, or interpretations of the information provided. Use of this website is at your own discretion and risk.
+</p>
+</section>
+
+<!-- =====================
+     FOOTER
+===================== -->
+<footer>
+<p>© 2026 Veloraq · Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+</footer>
+
+<!-- =====================
+     JAVASCRIPT
+===================== -->
+<script>
+const links=document.querySelectorAll("nav a");
+const sections=document.querySelectorAll("section");
+
+links.forEach(link=>{
+  link.addEventListener("click",e=>{
+    e.preventDefault();
+    const target=link.dataset.page;
+    sections.forEach(s=>s.classList.remove("active"));
+    document.getElementById(target).classList.add("active");
+    links.forEach(l=>l.classList.remove("active"));
+    link.classList.add("active");
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+});
+</script>
+
+</body>
+</html>
