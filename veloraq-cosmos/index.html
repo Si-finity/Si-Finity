@@ -3,277 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veloraq Cosmos — Exploring Space & the Universe</title>
+<title>Veloraq Cosmos | Exploring the Universe</title>
 
-<!-- =====================
-     GLOBAL CSS
-===================== -->
 <style>
-:root {
-  --bg-main:#05060d;
-  --bg-soft:#0c1024;
-  --accent:#8a6cff;
-  --accent-glow:rgba(138,108,255,.6);
-  --text-main:#eef0ff;
-  --text-muted:#aab0ff;
+html {
+  scroll-behavior: smooth;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Segoe UI",system-ui,sans-serif;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0b0f2a, #000);
+  color: #eaeaea;
+  line-height: 1.7;
 }
 
-html{scroll-behavior:smooth}
-
-body{
-  background:radial-gradient(circle at top,#0e1333,var(--bg-main));
-  color:var(--text-main);
-  line-height:1.75;
-  overflow-x:hidden;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  padding: 12px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* =====================
-   STAR BACKGROUND
-===================== */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(1px 1px at 20% 30%,#fff,transparent),
-    radial-gradient(1px 1px at 70% 80%,#fff,transparent),
-    radial-gradient(1px 1px at 40% 60%,#fff,transparent);
-  opacity:.15;
-  pointer-events:none;
+nav a {
+  color: #9ecbff;
+  margin: 6px 10px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-/* =====================
-   NAVBAR
-===================== */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(5,6,13,.85);
-  backdrop-filter:blur(12px);
-  z-index:1000;
-  border-bottom:1px solid rgba(255,255,255,.05);
+nav a:hover {
+  color: #fff;
 }
 
-nav ul{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  padding:14px;
-  gap:10px;
+section {
+  padding: 110px 12% 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-nav a{
-  color:var(--text-muted);
-  text-decoration:none;
-  font-size:13px;
-  padding:6px 12px;
-  border-radius:20px;
-  transition:.3s;
+section img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 30px 0;
+  box-shadow: 0 0 30px rgba(100,120,255,0.35);
 }
 
-nav a:hover,
-nav a.active{
-  color:#fff;
-  background:linear-gradient(135deg,var(--accent),#4dd9ff);
-  box-shadow:0 0 15px var(--accent-glow);
+h1, h2 {
+  color: #b8d6ff;
 }
 
-/* =====================
-   SECTIONS
-===================== */
-section{
-  min-height:100vh;
-  padding:120px 10% 80px;
-  display:none;
-  animation:fadeIn .8s ease forwards;
-}
-
-section.active{display:block}
-
-h1{
-  font-size:clamp(2.2rem,4vw,3.2rem);
-  margin-bottom:20px;
-  background:linear-gradient(135deg,#fff,var(--accent));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-p{
-  max-width:900px;
-  margin-bottom:18px;
-  color:#e4e6ff;
-}
-
-/* =====================
-   IMAGES
-===================== */
-.hero-img{
-  width:100%;
-  max-width:900px;
-  border-radius:18px;
-  margin:30px 0;
-  box-shadow:
-    0 0 25px rgba(138,108,255,.25),
-    0 0 60px rgba(77,217,255,.15);
-}
-
-/* =====================
-   FOOTER
-===================== */
-footer{
-  background:#04050a;
-  text-align:center;
-  padding:30px 10%;
-  border-top:1px solid rgba(255,255,255,.05);
-  font-size:13px;
-  color:var(--text-muted);
-}
-
-footer a{
-  color:var(--accent);
-  text-decoration:none;
-}
-
-/* =====================
-   ANIMATIONS
-===================== */
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media(max-width:768px){
-  section{padding:110px 6% 60px}
-  nav a{font-size:12px}
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: #aaa;
 }
 </style>
 </head>
 
 <body>
 
-<!-- =====================
-     NAVIGATION
-===================== -->
 <nav>
-<ul>
-  <li><a href="#" data-page="about" class="active">Veloraq</a></li>
-  <li><a href="#" data-page="origin">Origin</a></li>
-  <li><a href="#" data-page="galaxies">Galaxies</a></li>
-  <li><a href="#" data-page="stars">Stars</a></li>
-  <li><a href="#" data-page="blackholes">Black Holes</a></li>
-  <li><a href="#" data-page="solar">Solar</a></li>
-  <li><a href="#" data-page="exoplanets">Exoplanets</a></li>
-  <li><a href="#" data-page="dark">Dark</a></li>
-  <li><a href="#" data-page="spacetime">Space-Time</a></li>
-  <li><a href="#" data-page="telescopes">Telescopes</a></li>
-  <li><a href="#" data-page="human">Human Space</a></li>
-  <li><a href="#" data-page="future">Future</a></li>
-  <li><a href="#" data-page="legal">Legal</a></li>
-</ul>
+  <a href="#about">About</a>
+  <a href="#origin">Origin</a>
+  <a href="#galaxies">Galaxies</a>
+  <a href="#stars">Stars</a>
+  <a href="#blackholes">Black Holes</a>
+  <a href="#solarsystem">Solar System</a>
+  <a href="#exoplanets">Exoplanets</a>
+  <a href="#darkmatter">Dark Matter</a>
+  <a href="#spacetime">Space-Time</a>
+  <a href="#telescopes">Telescopes</a>
+  <a href="#exploration">Exploration</a>
+  <a href="#future">Future</a>
 </nav>
 
-<!-- =====================
-     ABOUT
-===================== -->
-<section id="about" class="active">
-<h1>Veloraq — A New Vision of the Universe</h1>
-<img class="hero-img" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Universe">
-
+<section id="about">
+<h1>Veloraq Cosmos</h1>
+<img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Universe">
 <p>
-Veloraq is a newly launched educational company dedicated exclusively to space and universe knowledge. Our mission is to make the cosmos understandable, inspiring, and scientifically accurate for everyone.
-</p>
-<p>
-Through elegant design and carefully researched explanations, Veloraq transforms astronomy and cosmology into an immersive learning experience. We focus on clarity, trust, and curiosity.
-</p>
-<p>
-Veloraq exists for those who look at the night sky and want deeper understanding — not just facts, but perspective.
+Veloraq Cosmos is a newly launched educational initiative dedicated entirely to the exploration of space and the universe. Our mission is to make complex cosmic concepts accessible, inspiring, and scientifically accurate for learners of all backgrounds. From the origins of the universe to the fate of cosmic expansion, Veloraq Cosmos bridges curiosity and understanding.
+<br><br>
+We believe space education is not just about facts, but perspective. The universe shows us humanity’s place in a vast cosmic structure, encouraging innovation, humility, and imagination. Veloraq Cosmos is built for the future — elegant, trustworthy, and driven by science.
 </p>
 </section>
 
-<!-- =====================
-     CONTENT SECTIONS
-===================== -->
-<section id="origin"><h1>The Origin of the Universe</h1><img class="hero-img" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564"><p>The Universe began 13.8 billion years ago with the Big Bang, an expansion of space itself that gave rise to matter, energy, and time.</p></section>
-
-<section id="galaxies"><h1>Galaxies</h1><img class="hero-img" src="https://images.unsplash.com/photo-1450849608880-6f787542c88a"><p>Galaxies are vast gravitational systems containing billions of stars, gas, dust, and dark matter.</p></section>
-
-<section id="stars"><h1>Stars</h1><img class="hero-img" src="https://images.unsplash.com/photo-1473923377535-0002805f57c3"><p>Stars are powered by nuclear fusion and evolve through predictable life cycles.</p></section>
-
-<section id="blackholes"><h1>Black Holes</h1><img class="hero-img" src="https://images.unsplash.com/photo-1543722530-d2c3201371e7"><p>Black holes represent extreme gravity where space-time bends dramatically.</p></section>
-
-<section id="solar"><h1>Solar System</h1><img class="hero-img" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3"><p>Our solar system formed from a disk of gas and dust around the young Sun.</p></section>
-
-<section id="exoplanets"><h1>Exoplanets</h1><img class="hero-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"><p>Thousands of planets exist beyond our solar system, some potentially habitable.</p></section>
-
-<section id="dark"><h1>Dark Universe</h1><img class="hero-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><p>Dark matter and dark energy dominate the cosmos yet remain mysterious.</p></section>
-
-<section id="spacetime"><h1>Space-Time</h1><img class="hero-img" src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986"><p>Space and time form a single fabric shaped by mass and energy.</p></section>
-
-<section id="telescopes"><h1>Telescopes</h1><img class="hero-img" src="https://images.unsplash.com/photo-1543946603-0f53e85e2b6d"><p>Observatories allow us to see the Universe across wavelengths.</p></section>
-
-<section id="human"><h1>Human Space Exploration</h1><img class="hero-img" src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06"><p>Human missions expand scientific understanding and inspire generations.</p></section>
-
-<section id="future"><h1>The Future of the Universe</h1><img class="hero-img" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde"><p>The Universe continues expanding, shaping cosmic destiny.</p></section>
-
-<!-- =====================
-     LEGAL PAGE
-===================== -->
-<section id="legal">
-<h1>Privacy Policy & Disclaimer</h1>
-
-<p><strong>Privacy Policy</strong></p>
+<section id="origin">
+<h2>The Origin of the Universe</h2>
+<img src="https://images.unsplash.com/photo-1462332420958-a05d1e002413" alt="Big Bang">
 <p>
-Veloraq does not collect personal data, cookies, or user-identifiable information. This website is static and hosted via GitHub Pages. Any analytics, if added in the future, will respect user privacy and comply with applicable laws.
-</p>
-
-<p><strong>Educational Disclaimer</strong></p>
-<p>
-All content provided on Veloraq is for educational and informational purposes only. While every effort is made to ensure scientific accuracy, the content should not be considered professional, academic, or research advice.
-</p>
-
-<p><strong>Liability Disclaimer</strong></p>
-<p>
-Veloraq is not responsible for errors, omissions, or interpretations of the information provided. Use of this website is at your own discretion and risk.
+The universe began approximately 13.8 billion years ago in an event known as the Big Bang. Rather than an explosion in space, it was an expansion of space itself. Matter, energy, time, and space emerged from an extremely hot and dense state.
+<br><br>
+As the universe expanded, particles formed atoms, stars ignited, and galaxies assembled. Observations of cosmic microwave background radiation and galaxy redshift provide strong evidence for this model. The Big Bang remains the most scientifically supported explanation for our cosmic origins.
 </p>
 </section>
 
-<!-- =====================
-     FOOTER
-===================== -->
+<section id="galaxies">
+<h2>Galaxies and Their Types</h2>
+<img src="https://images.unsplash.com/photo-1450849608880-6f787542c88a" alt="Galaxy">
+<p>
+Galaxies are vast collections of stars, gas, dust, and dark matter bound by gravity. They come in various forms including spiral, elliptical, and irregular galaxies. Our home, the Milky Way, is a barred spiral galaxy containing hundreds of billions of stars.
+<br><br>
+Galaxies evolve over billions of years through mergers and star formation processes. Studying them helps astronomers understand cosmic structure and the history of matter in the universe.
+</p>
+</section>
+
+<section id="stars">
+<h2>Stars: Birth, Life, and Death</h2>
+<img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3" alt="Stars">
+<p>
+Stars form in dense clouds of gas and dust called nebulae. Gravity causes these regions to collapse, igniting nuclear fusion. Throughout their lives, stars balance outward energy with inward gravity.
+<br><br>
+When stars exhaust their fuel, they die in spectacular ways, forming white dwarfs, neutron stars, or black holes. These stellar deaths enrich the universe with heavy elements essential for planets and life.
+</p>
+</section>
+
+<section id="blackholes">
+<h2>Black Holes and Neutron Stars</h2>
+<img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7" alt="Black Hole">
+<p>
+Black holes are regions where gravity is so intense that nothing, not even light, can escape. They form from massive stars collapsing under their own gravity. Neutron stars are similarly dense remnants, composed almost entirely of neutrons.
+<br><br>
+These extreme objects test the limits of physics and help scientists study gravity, time, and matter under unimaginable conditions.
+</p>
+</section>
+
+<section id="solarsystem">
+<h2>The Solar System</h2>
+<img src="https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700" alt="Solar System">
+<p>
+Our solar system consists of the Sun, eight planets, moons, asteroids, and comets. It formed from a rotating disk of gas and dust around the young Sun. Each planet offers unique insights into planetary science.
+<br><br>
+Exploring the solar system helps us understand planetary formation and the potential for life elsewhere.
+</p>
+</section>
+
+<section id="exoplanets">
+<h2>Exoplanets and Habitable Worlds</h2>
+<img src="https://images.unsplash.com/photo-1523987355523-c7b5b84d17e0" alt="Exoplanet">
+<p>
+Exoplanets orbit stars beyond our solar system. Thousands have been discovered, some lying in habitable zones where liquid water may exist. These discoveries reshape our understanding of planetary systems.
+<br><br>
+Future missions aim to detect atmospheres and biosignatures, bringing us closer to answering whether life exists beyond Earth.
+</p>
+</section>
+
+<section id="darkmatter">
+<h2>Dark Matter and Dark Energy</h2>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Dark Matter">
+<p>
+Dark matter and dark energy make up most of the universe, yet remain mysterious. Dark matter influences galaxy formation, while dark energy drives cosmic expansion.
+<br><br>
+Understanding these unseen components is one of modern science’s greatest challenges.
+</p>
+</section>
+
+<section id="spacetime">
+<h2>Space-Time and Relativity</h2>
+<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="Space Time">
+<p>
+Space and time are intertwined into a four-dimensional fabric called space-time. Massive objects curve space-time, producing gravity. Einstein’s relativity revolutionized physics.
+<br><br>
+Relativity is essential for technologies like GPS and deep-space navigation.
+</p>
+</section>
+
+<section id="telescopes">
+<h2>Telescopes and Observatories</h2>
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Telescope">
+<p>
+Telescopes allow humanity to observe distant cosmic objects. Space-based observatories avoid atmospheric distortion, revealing clearer views of the universe.
+<br><br>
+They help us explore the universe’s past, present, and future.
+</p>
+</section>
+
+<section id="exploration">
+<h2>Human Space Exploration</h2>
+<img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06" alt="Astronaut">
+<p>
+Human spaceflight represents humanity’s drive to explore beyond Earth. From the Moon landings to space stations, exploration expands scientific and technological boundaries.
+<br><br>
+Future missions aim to establish sustainable presence beyond Earth.
+</p>
+</section>
+
+<section id="future">
+<h2>The Future of the Universe</h2>
+<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="Future Universe">
+<p>
+The universe’s fate depends on dark energy and cosmic expansion. Possible outcomes include endless expansion, heat death, or cosmic collapse.
+<br><br>
+Studying the universe’s future helps us understand its deepest laws.
+</p>
+</section>
+
 <footer>
-<p>© 2026 Veloraq · Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+© 2026 Veloraq Cosmos · Educational · Non-Commercial Research & Learning
 </footer>
-
-<!-- =====================
-     JAVASCRIPT
-===================== -->
-<script>
-const links=document.querySelectorAll("nav a");
-const sections=document.querySelectorAll("section");
-
-links.forEach(link=>{
-  link.addEventListener("click",e=>{
-    e.preventDefault();
-    const target=link.dataset.page;
-    sections.forEach(s=>s.classList.remove("active"));
-    document.getElementById(target).classList.add("active");
-    links.forEach(l=>l.classList.remove("active"));
-    link.classList.add("active");
-    window.scrollTo({top:0,behavior:"smooth"});
-  });
-});
-</script>
 
 </body>
 </html>
