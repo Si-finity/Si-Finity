@@ -3,64 +3,90 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- SEO -->
-<meta name="description" content="Veloraq Cosmos is an educational platform exploring the universe, astronomy, galaxies, stars, exoplanets, dark matter, and the future of space science.">
+<title>Veloraq Cosmos | Space & Universe Knowledge</title>
+
+<meta name="description" content="Veloraq Cosmos is a premium educational platform dedicated to space, astronomy, galaxies, stars, exoplanets, cosmology, and the future of the universe.">
 <meta name="keywords" content="Veloraq Cosmos, universe, astronomy, space science, galaxies, stars, exoplanets, cosmology">
 <meta name="author" content="Veloraq Cosmos">
 <meta name="robots" content="index, follow">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veloraq Cosmos | Space & Universe Knowledge</title>
 
 <style>
 html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #05050b;
-  color: #e8e8f0;
-  line-height: 1.8;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1026, #000000);
+  color: #eaeaf2;
+  line-height: 1.9;
 }
 
+/* NAVIGATION */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0b0b18;
-  padding: 15px;
+  background: rgba(10,10,25,0.9);
+  backdrop-filter: blur(12px);
   z-index: 1000;
+  padding: 14px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 nav a {
-  color: #bcaeff;
-  margin-right: 15px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  color: #b9a9ff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-nav a:hover { color: #ffffff; }
+nav a:hover {
+  background: rgba(140,120,255,0.15);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(140,120,255,0.6);
+}
 
+/* SECTIONS */
 section {
-  padding: 120px 10% 90px;
-  border-bottom: 1px solid #222;
+  padding: 130px 12% 100px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-h1, h2 { color: #d2c6ff; }
+h1, h2 {
+  color: #d3c9ff;
+}
 
 section img {
   width: 100%;
-  max-width: 900px;
-  margin: 35px auto;
+  max-width: 980px;
   display: block;
-  border-radius: 14px;
-  box-shadow: 0 0 35px rgba(120,90,255,0.35);
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(120,100,255,0.4);
 }
 
+/* PRIVACY CARD */
+.privacy-card {
+  background: rgba(20,20,40,0.85);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(120,100,255,0.25);
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 35px;
   background: #0b0b18;
   font-size: 14px;
   color: #aaa;
@@ -90,208 +116,241 @@ footer {
 <!-- HOME -->
 <section id="home">
 <h1>Veloraq Cosmos</h1>
-<img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Universe">
+<img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80" alt="Deep space universe">
 <p>
-Veloraq Cosmos is an educational space science website designed to present the
-universe in a clear, structured, and scientifically accurate manner. The goal of
-this platform is to help readers understand cosmic phenomena without exaggeration
-or speculation.
+Veloraq Cosmos is a newly launched educational platform dedicated to providing clear,
+accurate, and scientifically responsible knowledge about the universe. It exists to
+bridge the gap between complex astronomical research and curious minds seeking
+reliable understanding.
 </p>
 <p>
-The universe is vast and continuously evolving. From the formation of galaxies to
-the discovery of distant planets, each observation contributes to humanity’s
-understanding of existence. Veloraq Cosmos aims to explain these discoveries in
-a way that is approachable and reliable.
+The universe is vast, ancient, and constantly evolving. From the first moments of
+cosmic expansion to the distant future of galaxies, every discovery reshapes how
+humanity understands existence. Veloraq Cosmos presents these ideas without
+sensationalism, focusing instead on evidence, observation, and accepted scientific
+theories.
 </p>
 <p>
-This website is intended for learners, students, and curious minds seeking
-fact-based space knowledge. Content is updated to reflect current scientific
-understanding while maintaining clarity and responsibility.
+This platform is designed for learners, students, educators, and enthusiasts who
+value clarity over speculation. As scientific understanding evolves, Veloraq Cosmos
+aims to evolve with it, remaining a trusted educational reference grounded in
+astronomy and cosmology.
 </p>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
 <h2>About Veloraq Cosmos</h2>
-<img src="https://images.unsplash.com/photo-1462332420958-a05d1e002413" alt="Cosmos">
+<img src="https://images.unsplash.com/photo-1462332420958-a05d1e002413?auto=format&fit=crop&w=1600&q=80" alt="Cosmic nebula">
 <p>
-Veloraq Cosmos was created to provide educational content focused on astronomy,
-cosmology, and space science. The platform emphasizes accuracy, transparency, and
-respect for scientific research.
+Veloraq Cosmos was created with the purpose of making space science accessible
+without compromising accuracy. The platform focuses on astronomy, cosmology,
+planetary science, and the future of space exploration.
 </p>
 <p>
-Rather than presenting space as mystery alone, Veloraq Cosmos highlights evidence,
-observation, and discovery. Every topic is written to avoid misinformation while
-remaining accessible to non-experts.
+Rather than presenting space as a collection of mysteries alone, Veloraq Cosmos
+emphasizes the scientific processes that allow humans to study distant stars,
+galaxies, and planets. Each topic is written to encourage understanding rather than
+memorization.
 </p>
 <p>
-The platform will continue evolving alongside scientific progress, ensuring that
-knowledge shared remains relevant and trustworthy.
+As a newly formed educational initiative, Veloraq Cosmos is committed to ethical
+knowledge sharing, transparency, and intellectual responsibility. The content is
+carefully structured to remain informative, engaging, and grounded in real science.
 </p>
 </section>
 
 <!-- ORIGIN -->
 <section id="origin">
 <h2>The Origin of the Universe</h2>
-<img src="https://images.unsplash.com/photo-1450849608880-6f787542c88a" alt="Big Bang">
+<img src="https://images.unsplash.com/photo-1450849608880-6f787542c88a?auto=format&fit=crop&w=1600&q=80" alt="Big Bang concept">
 <p>
-The universe originated approximately 13.8 billion years ago during the Big Bang.
-This event marked the expansion of space itself rather than an explosion in space.
+The universe began approximately 13.8 billion years ago in an event known as the Big
+Bang. This was not an explosion within space, but an expansion of space itself from
+an extremely hot and dense state.
 </p>
 <p>
-As the universe expanded and cooled, particles formed atoms, and gravity caused
-matter to cluster into stars and galaxies.
+As the universe expanded, it cooled, allowing particles to form atoms. Gravity then
+caused matter to gather into stars and galaxies. Evidence supporting this model
+includes cosmic microwave background radiation and the observed expansion of
+galaxies.
 </p>
 <p>
-Evidence such as cosmic background radiation and galactic redshift supports this
-theory, making it the foundation of modern cosmology.
+Understanding the origin of the universe helps scientists test physical laws under
+extreme conditions and reconstruct the cosmic timeline that led to the formation of
+everything observed today.
 </p>
 </section>
 
 <!-- GALAXIES -->
 <section id="galaxies">
-<h2>Galaxies</h2>
-<img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3" alt="Galaxy">
+<h2>Galaxies and Their Types</h2>
+<img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1600&q=80" alt="Spiral galaxy">
 <p>
-Galaxies are massive collections of stars, gas, dust, and dark matter bound by
-gravity. They vary in shape and size across the universe.
+Galaxies are massive systems composed of stars, gas, dust, and dark matter bound
+together by gravity. They form the fundamental structure of the observable universe.
 </p>
 <p>
-Spiral galaxies feature rotating arms, elliptical galaxies are older and smoother,
-and irregular galaxies form through interactions.
+Astronomers classify galaxies into spiral, elliptical, and irregular types. Each type
+represents different evolutionary paths shaped by gravity and cosmic interactions.
 </p>
 <p>
-Studying galaxies helps scientists understand large-scale cosmic structure.
+Studying galaxies allows scientists to explore dark matter distribution, star
+formation history, and the large-scale structure of the cosmos.
 </p>
 </section>
 
 <!-- STARS -->
 <section id="stars">
-<h2>Stars</h2>
-<img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7" alt="Stars">
+<h2>Stars: Birth, Life, and Death</h2>
+<img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&w=1600&q=80" alt="Star field">
 <p>
-Stars form within nebulae when gravity compresses gas until nuclear fusion begins.
+Stars form within nebulae when gravity compresses gas until nuclear fusion ignites.
+Fusion releases energy that allows stars to shine for millions or billions of years.
 </p>
 <p>
-Fusion produces energy that allows stars to shine for millions or billions of
-years.
+A star’s mass determines its lifespan and final fate. Smaller stars become white
+dwarfs, while massive stars explode as supernovae, leaving neutron stars or black
+holes.
 </p>
 <p>
-When stars die, they enrich space with elements necessary for planets and life.
+These stellar processes create heavy elements that later form planets and life,
+making stars central to cosmic evolution.
 </p>
 </section>
 
 <!-- BLACK HOLES -->
 <section id="blackholes">
-<h2>Black Holes</h2>
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Black Hole">
+<h2>Black Holes and Neutron Stars</h2>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80" alt="Black hole visualization">
 <p>
-Black holes form from the collapse of massive stars. Their gravity prevents light
-from escaping.
+Black holes form when massive stars collapse under gravity. Their gravitational pull
+is so strong that light cannot escape once it crosses the event horizon.
 </p>
 <p>
-They are detected through gravitational waves and interactions with nearby matter.
+Neutron stars are similarly extreme, packing immense mass into a tiny volume. These
+objects allow scientists to study physics beyond Earth-based conditions.
 </p>
 <p>
-Black holes help test physics under extreme conditions.
+Observations of gravitational waves have confirmed their existence and expanded our
+understanding of space-time.
 </p>
 </section>
 
 <!-- SOLAR SYSTEM -->
 <section id="solarsystem">
-<h2>Solar System</h2>
-<img src="https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700" alt="Solar System">
+<h2>The Solar System in Detail</h2>
+<img src="https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?auto=format&fit=crop&w=1600&q=80" alt="Solar system illustration">
 <p>
-The solar system formed about 4.6 billion years ago and includes planets, moons,
-and smaller bodies.
+The solar system formed approximately 4.6 billion years ago from a rotating cloud of
+gas and dust. At its center lies the Sun, providing energy and structure.
 </p>
 <p>
-Each planet has unique properties shaped by distance and composition.
+The eight planets vary widely in composition and environment, from rocky worlds to
+gas giants.
 </p>
 <p>
-Studying the solar system provides insight into planetary evolution.
+Studying our solar system helps scientists understand planetary formation and
+habitability.
 </p>
 </section>
 
 <!-- EXOPLANETS -->
 <section id="exoplanets">
-<h2>Exoplanets</h2>
-<img src="https://images.unsplash.com/photo-1473929734677-47b0c6e07c96" alt="Exoplanet">
+<h2>Exoplanets and Habitable Worlds</h2>
+<img src="https://images.unsplash.com/photo-1473929734677-47b0c6e07c96?auto=format&fit=crop&w=1600&q=80" alt="Exoplanet concept">
 <p>
-Exoplanets are planets orbiting stars beyond our solar system. Thousands have been
-discovered using advanced observation techniques.
+Exoplanets are planets that orbit stars beyond our solar system. Thousands have been
+discovered using advanced space telescopes and detection techniques.
 </p>
 <p>
-Some exist within habitable zones, increasing interest in potential life beyond
-Earth.
+Some exoplanets exist within habitable zones where liquid water may be possible. These
+discoveries suggest that planets are common throughout the galaxy.
 </p>
 <p>
-Their study expands understanding of planetary systems.
+Future missions aim to analyze exoplanet atmospheres, bringing humanity closer to
+answering whether life exists beyond Earth.
 </p>
 </section>
 
 <!-- DARK MATTER -->
 <section id="darkmatter">
-<h2>Dark Matter</h2>
-<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="Dark Matter">
+<h2>Dark Matter and Dark Energy</h2>
+<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80" alt="Dark matter concept">
 <p>
-Dark matter does not emit light but affects galaxy motion through gravity.
+Dark matter and dark energy make up most of the universe, yet remain invisible and
+poorly understood.
 </p>
 <p>
-Its nature remains unknown, making it a key research focus.
+Their effects are observed through gravity and cosmic expansion rather than direct
+detection.
 </p>
 <p>
-Understanding dark matter could reshape physics.
+Understanding them may redefine fundamental physics.
 </p>
 </section>
 
 <!-- SPACE-TIME -->
 <section id="spacetime">
-<h2>Space-Time</h2>
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Space Time">
+<h2>Space-Time and Relativity</h2>
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80" alt="Space-time curvature">
 <p>
-Space-time combines space and time into a single structure.
+Space-time unifies space and time into a single structure shaped by mass and energy.
 </p>
 <p>
-Gravity results from curvature in space-time caused by mass.
+Einstein’s theory of relativity explains gravity as curvature in space-time.
 </p>
 <p>
-This concept underpins modern cosmology.
+Relativity underpins modern cosmology and space exploration.
 </p>
 </section>
 
 <!-- FUTURE -->
 <section id="future">
-<h2>The Future of Space Exploration</h2>
-<img src="https://images.unsplash.com/photo-1517976547714-720226b864c1" alt="Future Space">
+<h2>The Future of the Universe</h2>
+<img src="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1600&q=80" alt="Future universe">
 <p>
-Future missions aim to explore Mars and deep space.
+The universe’s future depends on dark energy and cosmic expansion. Current evidence
+suggests continued expansion.
 </p>
 <p>
-Advances in technology will expand human presence beyond Earth.
+Studying cosmic fate helps scientists understand existence on the largest scale.
 </p>
 <p>
-Space exploration continues to redefine humanity’s future.
+The future of space exploration remains one of humanity’s greatest endeavors.
 </p>
 </section>
 
 <!-- PRIVACY -->
 <section id="privacy">
 <h2>Privacy Policy & Disclaimer</h2>
+<div class="privacy-card">
 <p>
-Veloraq Cosmos is a proprietary educational website. All content, branding, and
-structure are protected. Unauthorized reproduction or misuse is prohibited.
+Veloraq Cosmos is a proprietary educational website. All content, written material,
+visual design, branding, and structure are the intellectual property of Veloraq
+Cosmos unless otherwise stated. Unauthorized reproduction, redistribution,
+impersonation, or misuse is strictly prohibited.
 </p>
 <p>
-No personal data is collected. Content is provided for educational purposes only.
+This website does not collect, store, or process personal user data. No tracking
+cookies, analytics, or advertising technologies are used. Veloraq Cosmos respects
+user privacy and operates solely as an informational platform.
 </p>
 <p>
-© 2026 Veloraq Cosmos. All rights reserved.
+All content is provided for educational purposes only. While every effort is made to
+ensure accuracy, scientific understanding evolves, and Veloraq Cosmos makes no
+guarantee of absolute completeness. The website does not provide professional,
+medical, or legal advice.
 </p>
+<p>
+By accessing this website, you acknowledge and agree to this privacy policy and
+disclaimer.
+</p>
+</div>
 </section>
 
 <footer>
-© 2026 Veloraq Cosmos • Science-Based Educational Content
+© 2026 Veloraq Cosmos · All Rights Reserved · Science-Based Educational Content
 </footer>
 
 </body>
